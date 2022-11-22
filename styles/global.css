@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Extra Bold';
+    src: url('/fonts/Roboto/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('/fonts/Roboto/Roboto-Bold.ttf');
+}
+
+
+/* Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Global */
+:root {
+    --color-dark: #1F2937;
+    --color-main-text: #F9FAF8;
+    --color-secondary-text: #E5E7EB;
+    --color-primary-button: #3882F6;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: var(--color-dark);
+}
+
+.navbar {
+    position: sticky;
+    top: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar,
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar ul li a {
+    padding: 10px;
+}
+
+header>* {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.navbar span {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 1.2rem;
+}
+
+.header-content {
+    padding: 100px 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.header-content div {
+    max-width: 450px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.header-content div h1 {
+    font-size: 48px;
+    font-family: 'Roboto Extra Bold';
+    color: var(--color-main-text);
+}
+
+.header-content p {
+    color: var(--color-secondary-text);
+}
+
+.header-content p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.header-content img {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.header-content .btn {
+    background-color: var(--color-primary-button);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-family: 'Roboto Bold', sans-serif;
+}
