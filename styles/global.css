@@ -13,6 +13,11 @@
     src: url('/fonts/Roboto/Roboto-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Roboto Light Italic';
+    src: url('/fonts/Roboto/Roboto-LightItalic.ttf');
+}
+
 
 /* Reset */
 html {
@@ -60,45 +65,51 @@ img {
 /* Global */
 :root {
     --color-dark: #1F2937;
+    --color-bg-section: #E5E7EB;
     --color-main-text: #F9FAF8;
     --color-secondary-text: #E5E7EB;
     --color-primary-button: #3882F6;
 }
 
-.flex {
-    display: flex;
+body {
+    font-family: Roboto, sans-serif;
 }
 
-body {
-    color: #ffffff;
-    font-family: Roboto, sans-serif;
+strong {
+    font-family: 'Roboto Bold';
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 0;
+    padding: 50px 0;
 }
 
 /* Header */
 header {
     background-color: var(--color-dark);
-}
-
-.navbar {
     position: sticky;
-    top: 20px;
-    margin-bottom: 20px;
+    padding: 20px 0;
+    top: 0;
 }
-
+.navbar {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
 .navbar,
 .navbar ul {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .navbar ul li a {
-    padding: 10px;
+    font-size: 18px
 }
 
-header>* {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
+header {
+    color: var(--color-secondary-text);
 }
 
 .navbar {
@@ -107,49 +118,133 @@ header>* {
 
 .navbar span {
     font-family: 'Roboto Bold', sans-serif;
-    font-size: 1.2rem;
+    font-size: 24px;
+    color: var(--color-main-text);
+}
+.about {
+    background-color: var(--color-dark);
+    margin-top: -20px;
 }
 
-.header-content {
-    padding: 100px 0;
+.about > div {
+    color: var(--color-secondary-text);
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10%;
+    padding: 90px 0;
 }
 
-.header-content div {
-    max-width: 450px;
-    margin: auto;
+.about > div > div {
+    max-width: 45%;
     line-height: 1.5;
 }
 
-.header-content div h1 {
+.about > div > div h1 {
     font-size: 48px;
     font-family: 'Roboto Extra Bold';
     color: var(--color-main-text);
 }
 
-.header-content p {
-    color: var(--color-secondary-text);
-}
-
-.header-content p:last-of-type {
+.about > div > div p:last-of-type {
     margin-bottom: 20px;
 }
 
-.header-content img {
-    width: 500px;
-    height: 250px;
+.about > div > img {
+    width: 45%;
+    height: 200px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
     margin: auto;
 }
 
-.header-content .btn {
+.btn {
     background-color: var(--color-primary-button);
-    padding: 10px 25px;
-    border-radius: 5px;
+    color: var(--color-main-text);
+    display: inline-block;
+    padding: 6px 25px;
+    border-radius: 7px;
     font-family: 'Roboto Bold', sans-serif;
+}
+
+/* Projects Section */
+.projects h1 {
+    font-family: 'Roboto Extra Bold', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 40px;
+}
+
+.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.projects ul li p {
+    width: 180px;
+    margin-top: 10px;
+}
+
+.projects ul li img {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.projects ul li img:hover {
+    outline: 3px solid var(--color-primary-button);
+}
+/* Quote Section */
+
+.quote {
+    background-color: var(--color-bg-section);
+    padding: 8% 15%;
+    margin: 0;
+}
+
+.quote p:first-of-type {
+    font-size: 36px;
+    font-family: 'Roboto Light Italic', sans-serif;
+}
+
+.quote p:last-of-type {
+    text-align: right;
+    font-family: 'Roboto Bold', sans-serif;
+}
+
+/* Contact Section */
+
+.section-contact {
+    width: 60%;
+    background-color: var(--color-primary-button);
+    color: var(--color-main-text);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 7px;
+    gap: 30px;
+}
+
+.section-contact h2 {
+    font-family: 'Roboto Bold', sans-serif;
+}
+.btn-border {
+    border: 2px solid var(--color-main-text)
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background-color: var(--color-dark);
+    padding: 20px;
+    text-align: center;
+    color: var(--color-secondary-text);
 }
