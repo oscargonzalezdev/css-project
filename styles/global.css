@@ -215,10 +215,15 @@ main {
 
 /* Quote Section */
 
-.quote {
+.quote-container {
+    width: 100%;
     background-color: var(--color-bg-section);
-    padding: 8% 15%;
-    margin: 0;
+    margin-bottom: 50px;
+}
+
+.quote {
+    padding: 4% 8%;
+    margin: auto;
 }
 
 .quote p:first-of-type {
